@@ -3,7 +3,7 @@
     <div class="mt-3">
 
         <div class="d-flex flex-wrap    justify-content-evenly">
-            <button type="button" class="btn btn-danger  mt-3 ">
+            <button @:click="makeAnorder" type="button" class="btn btn-danger  mt-3 ">
                 Оформить Заказ
             </button>
 
@@ -64,7 +64,7 @@ export default {
         totalprice() {
             let result = 0
             result = this.$store.state.addToposts3.reduce(function (sum, elem) {
-                return sum + elem.quantity*elem.id;
+                return sum + elem.quantity * elem.id;
             }, 0);
             return result
         },
@@ -75,6 +75,11 @@ export default {
     methods: {
         openbasket() {
             this.$store.commit('openbasket')
+        },
+
+        makeAnorder() {
+            alert(' В  мыслях была всплывающая модалка, в которой список товаров, цена, и инпуты в которых указываешь, телефон, адрес и т.д, и кнопка отправить. После клика на апи улетает пост запрос с данными о заказае, в  виде json который понимает апи. : )))')
+
         },
 
         quantityMinus(id) {

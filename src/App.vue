@@ -42,7 +42,7 @@ export default {
       let result = 0
 
       result = this.$store.state.addToposts3.reduce(function (sum, elem) {
-        return sum + elem.quantity ;
+        return sum + elem.quantity;
       }, 0);
 
       return result
